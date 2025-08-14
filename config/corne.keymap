@@ -19,6 +19,22 @@
         };
     };
 
+    macros {
+        alt_1: alt_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp NUMBER_1>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "ALT_1";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -58,7 +74,7 @@
 
         Navigation {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &alt_1  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
                         &trans  &trans  &trans    &trans          &trans          &trans
