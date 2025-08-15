@@ -169,9 +169,51 @@
                 <&macro_tap>,
                 <&kp Q>,
                 <&macro_release>,
-                <&kp LEFT_ALT &kp LEFT_SHIFT>;
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
 
             label = "ALT_SHIFT_Q";
+        };
+
+        alt_s: alt_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "ALT_S";
+        };
+
+        alt_shift_space: alt_shift_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "ALT_SHIFT_SPACE";
+        };
+
+        alt_shift_e: alt_shift_e {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp E>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "ALT_SHIFT_E";
         };
     };
 
@@ -201,10 +243,10 @@
 
             display-name = "Qwerty";
             bindings = <
-&kp ESCAPE        &kp Q  &kp W  &kp E  &kp R  &kp T        &kp Y          &kp U             &kp I      &kp O    &kp P     &to 5
-&kp TAB           &kp A  &kp S  &kp D  &kp F  &kp G        &kp H          &kp J             &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C  &kp V  &kp B        &kp N          &kp M             &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                                &mo 3  &mo 1  &kp SPACE    &kp BACKSPACE  &kp LEFT_CONTROL  &mo 2
+&kp ESCAPE        &kp Q  &kp W  &kp E  &kp R  &kp T                   &kp Y          &kp U             &kp I      &kp O    &kp P     &to 5
+&kp TAB           &kp A  &kp S  &kp D  &kp F  &kp G                   &kp H          &kp J             &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C  &kp V  &kp B                   &kp N          &kp M             &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+                                &mo 3  &mo 1  &mt LEFT_SHIFT SPACE    &kp BACKSPACE  &kp LEFT_CONTROL  &mo 2
             >;
         };
 
@@ -232,10 +274,10 @@
 
         Navigation {
             bindings = <
-&alt_shift_q  &alt_1  &alt_2  &alt_3  &alt_4  &alt_5    &alt_6          &alt_7          &alt_8        &alt_9           &alt_0  &trans
-&trans        &trans  &trans  &trans  &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans        &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
-                              &trans  &trans  &trans    &trans          &trans          &trans
+&alt_shift_q  &alt_1  &alt_2        &alt_3  &alt_4  &alt_5              &alt_6          &alt_7          &alt_8        &alt_9           &alt_0  &trans
+&trans        &trans  &alt_s        &trans  &trans  &trans              &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans        &trans  &alt_shift_e  &trans  &trans  &trans              &trans          &trans          &trans        &trans           &trans  &trans
+                                    &trans  &trans  &alt_shift_space    &trans          &trans          &trans
             >;
 
             label = "Navigation";
