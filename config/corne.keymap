@@ -18,6 +18,26 @@
             tapping-term-ms = <200>;
             bindings = <&sk LEFT_SHIFT>, <&caps_word>;
         };
+
+        alt_q_1: alt_q_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_Q_1";
+            bindings = <&kp Q>, <&kp NUMBER_1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>;
+        };
+
+        alt_w_2: alt_w_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_W_2";
+            bindings = <&kp W>, <&kp NUMBER_2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>;
+        };
     };
 
     combos {
@@ -46,10 +66,10 @@
 
             display-name = "Qwerty";
             bindings = <
-&kp ESCAPE        &kp Q  &kp W  &kp E  &kp R                         &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P     &kp BACKSLASH
-&kp TAB           &kp A  &kp S  &kp D  &kp F                         &kp G        &kp H          &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C  &kp V                         &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH  &to 5
-                                &mo 3  &tap_dance_sk_shift_capsword  &kp SPACE    &kp BACKSPACE  &mo 1  &mo 2
+&kp ESCAPE        &alt_q_1  &alt_w_2  &kp E         &kp R                         &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P     &kp BACKSLASH
+&kp TAB           &kp A     &kp S     &kp D         &kp F                         &kp G        &kp H          &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL  &kp Z     &kp X     &kp C         &kp V                         &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH  &to 5
+                                      &kp LEFT_ALT  &tap_dance_sk_shift_capsword  &kp SPACE    &kp BACKSPACE  &mo 1  &mo 2
             >;
         };
 
@@ -78,8 +98,8 @@
         Navigation {
             bindings = <
 &kp LS(LA(Q))  &kp LA(NUMBER_1)  &kp LA(N2)     &kp LA(N3)  &kp LA(N4)  &kp LA(N5)           &kp LA(N6)      &kp LA(N7)      &kp LA(N8)    &kp LA(N9)       &kp LA(N0)  &trans
-&trans         &trans            &kp LA(S)      &trans      &trans      &trans               &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans      &trans
-&trans         &trans            &kp LA(LS(E))  &trans      &trans      &trans               &trans          &trans          &trans        &trans           &trans      &trans
+&kp LA(TAB)    &trans            &kp LA(S)      &trans      &kp LA(F)   &trans               &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans      &trans
+&trans         &trans            &kp LA(LS(E))  &trans      &kp LA(V)   &trans               &trans          &trans          &trans        &trans           &trans      &trans
                                                 &trans      &trans      &kp LA(LS(SPACE))    &trans          &trans          &trans
             >;
 
