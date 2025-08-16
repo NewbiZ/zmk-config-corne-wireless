@@ -151,11 +151,11 @@
             keep-mods = <(MOD_LALT)>;
         };
 
-        td_backslash_alt_l: td_backslash_alt_l {
+        td_backslash_lock: td_backslash_lock {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_BACKSLASH_ALT_L";
+            label = "TD_BACKSLASH_LOCK";
             #binding-cells = <0>;
-            bindings = <&kp BACKSLASH>, <&kp LA(L)>;
+            bindings = <&kp BACKSLASH>, <&kp LA(K_LOCK)>;
         };
     };
 
@@ -185,7 +185,7 @@
 
             display-name = "Qwerty";
             bindings = <
-&morph_alt_esc_shift_q  &morph_alt_q_1  &morph_alt_w_2        &morph_alt_e_3  &morph_alt_r_4         &morph_alt_t_5                  &morph_alt_y_6  &morph_alt_u_7  &morph_alt_i_8  &morph_alt_o_9  &morph_alt_p_0  &kp BACKSLASH
+&morph_alt_esc_shift_q  &morph_alt_q_1  &morph_alt_w_2        &morph_alt_e_3  &morph_alt_r_4         &morph_alt_t_5                  &morph_alt_y_6  &morph_alt_u_7  &morph_alt_i_8  &morph_alt_o_9  &morph_alt_p_0  &td_backslash_lock
 &kp TAB                 &kp A           &kp S                 &kp D           &kp F                  &kp G                           &kp H           &kp J           &kp K           &kp L           &kp SEMI        &kp SQT
 &kp LEFT_CONTROL        &kp Z           &morph_alt_x_shift_e  &kp C           &kp V                  &kp B                           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &mo 3
                                                               &kp LEFT_ALT    &td_sk_shift_capsword  &morph_alt_space_shift_space    &kp BACKSPACE   &mo 1           &mo 2
