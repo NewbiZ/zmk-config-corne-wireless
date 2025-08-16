@@ -169,9 +169,14 @@
             key-positions = <19 20>;
         };
 
-        combo_nav {
+        combo_nav_kbd {
             bindings = <&mo 4>;
             key-positions = <16 15>;
+        };
+
+        combo_nav_m {
+            bindings = <&mo 5>;
+            key-positions = <16 15 14>;
         };
     };
 
@@ -227,15 +232,25 @@
             label = "Magic";
         };
 
-        Navigation {
+        Navigation_KBD {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
-                        &trans  &trans  &trans    &mkp LCLK       &mkp MCLK       &mkp RCLK
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans          &trans
             >;
 
-            label = "Navigation";
+            label = "Navigation_KBD";
+        };
+
+        Navigation_M {
+            label = "Navigation_M";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans          &trans           &trans  &trans
+                        &trans  &trans  &trans    &mkp LCLK  &mkp MCLK       &mkp RCLK
+            >;
         };
     };
 };
