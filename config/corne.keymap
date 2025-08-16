@@ -19,210 +19,17 @@
         };
     };
 
-    macros {
-        alt_1: alt_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp NUMBER_1>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_1";
-        };
-
-        alt_2: alt_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp NUMBER_2>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_2";
-        };
-
-        alt_5: alt_5 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp NUMBER_5>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_5";
-        };
-
-        alt_3: alt_3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp NUMBER_3>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_3";
-        };
-
-        alt_4: alt_4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp NUMBER_4>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_4";
-        };
-
-        alt_6: alt_6 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp NUMBER_6>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_6";
-        };
-
-        alt_7: alt_7 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp NUMBER_7>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_7";
-        };
-
-        alt_8: alt_8 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp NUMBER_8>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_8";
-        };
-
-        alt_9: alt_9 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp NUMBER_9>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_9";
-        };
-
-        alt_0: alt_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp NUMBER_0>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_0";
-        };
-
-        alt_shift_q: alt_shift_q {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT &kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp Q>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT &kp LEFT_ALT>;
-
-            label = "ALT_SHIFT_Q";
-        };
-
-        alt_s: alt_s {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp S>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_S";
-        };
-
-        alt_shift_space: alt_shift_space {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT &kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp SPACE>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT &kp LEFT_ALT>;
-
-            label = "ALT_SHIFT_SPACE";
-        };
-
-        alt_shift_e: alt_shift_e {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT &kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp E>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT &kp LEFT_ALT>;
-
-            label = "ALT_SHIFT_E";
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
         combo_enter {
             bindings = <&kp RETURN>;
             key-positions = <19 20>;
+        };
+
+        combo_capsword {
+            bindings = <&caps_word>;
+            key-positions = <16 15>;
         };
     };
 
@@ -238,18 +45,18 @@
 
             display-name = "Qwerty";
             bindings = <
-&kp ESCAPE        &kp Q  &kp W  &kp E  &kp R                      &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P     &to 5
-&kp TAB           &kp A  &kp S  &kp D  &kp F                      &kp G        &kp H          &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C  &kp V                      &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                                &mo 3  &mt_capsword LEFT_SHIFT 0  &kp SPACE    &kp BACKSPACE  &mo 1  &mo 2
+&kp ESCAPE        &kp Q  &kp W  &kp E  &kp R           &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P     &to 5
+&kp TAB           &kp A  &kp S  &kp D  &kp F           &kp G        &kp H          &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C  &kp V           &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+                                &mo 3  &sk LEFT_SHIFT  &kp SPACE    &kp BACKSPACE  &mo 1  &mo 2
             >;
         };
 
         Numbers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK  &kp EQUAL
-&trans  &trans  &trans  &trans  &trans  &trans    &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH     &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp COMMA     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp DOT       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
                         &trans  &trans  &trans    &trans        &trans        &trans
             >;
 
@@ -258,10 +65,10 @@
 
         Symbols {
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans    &trans  &kp MINUS  &kp UNDERSCORE  &kp ASTERISK   &trans  &trans
-&trans  &kp HASH         &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &trans  &kp COLON  &kp CARET       &kp PERCENT    &trans  &trans
-&trans  &trans           &trans       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans    &trans  &kp PLUS   &kp EQUAL       &kp AMPERSAND  &trans  &trans
-                                      &trans                &trans                 &trans    &trans  &trans     &trans
+&trans  &kp EXCLAMATION  &kp AT_SIGN       &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans    &trans  &kp MINUS  &kp UNDERSCORE  &kp ASTERISK   &trans  &trans
+&trans  &kp HASH         &kp DOLLAR        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &trans  &kp COLON  &kp CARET       &kp PERCENT    &trans  &trans
+&trans  &kp LESS_THAN    &kp GREATER_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans    &trans  &kp PLUS   &kp EQUAL       &kp AMPERSAND  &trans  &trans
+                                           &trans                &trans                 &trans    &trans  &trans     &trans
             >;
 
             label = "Symbols";
@@ -269,10 +76,10 @@
 
         Navigation {
             bindings = <
-&alt_shift_q  &alt_1  &alt_2        &alt_3  &alt_4  &alt_5              &alt_6          &alt_7          &alt_8        &alt_9           &alt_0  &trans
-&trans        &trans  &alt_s        &trans  &trans  &trans              &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans        &trans  &alt_shift_e  &trans  &trans  &trans              &trans          &trans          &trans        &trans           &trans  &trans
-                                    &trans  &trans  &alt_shift_space    &trans          &trans          &trans
+&kp LS(LA(Q))  &kp LA(NUMBER_1)  &kp LA(N2)     &kp LA(N3)  &kp LA(N4)  &kp LA(N5)           &kp LA(N6)      &kp LA(N7)      &kp LA(N8)    &kp LA(N9)       &kp LA(N0)  &trans
+&trans         &trans            &kp LA(S)      &trans      &trans      &trans               &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans      &trans
+&trans         &trans            &kp LA(LS(E))  &trans      &trans      &trans               &trans          &trans          &trans        &trans           &trans      &trans
+                                                &trans      &trans      &kp LA(LS(SPACE))    &trans          &trans          &trans
             >;
 
             label = "Navigation";
