@@ -167,7 +167,7 @@
             key-positions = <19 20>;
         };
 
-        combo_esc {
+        combo_nav {
             bindings = <&mo 4>;
             key-positions = <16 15>;
         };
