@@ -155,7 +155,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_BACKSLASH_LOCK";
             #binding-cells = <0>;
-            bindings = <&kp BACKSLASH>, <&kp K_LOCK>;
+            bindings = <&kp BACKSLASH>, <&kp LA(L)>;
 
             tapping-term-ms = <150>;
         };
